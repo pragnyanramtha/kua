@@ -47,8 +47,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="mt-8 text-xl sm:text-2xl font-light text-white/60 max-w-2xl text-balance"
         >
-          We boost reach for modern brands using elite SEO and striking web
-          design. <br className="hidden sm:block" />
+          We build websites that rank. Not brochures that sit in a corner and
+          collect dust. Technical SEO, custom design, and a pricing page you can
+          actually read.{" "}
+          <br className="hidden sm:block" />
           <span className="text-[#CCFF00] font-medium">
             Transparent pricing. Zero BS.
           </span>

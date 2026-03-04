@@ -6,20 +6,28 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
     {
-        q: "How long does a website take to build?",
-        a: "For our Starter Landing page, typical turnaround is 3-5 days. Business & SEO sites usually take 2-4 weeks. Custom enterprise projects demand a dedicated timeline based on scope.",
+        q: "How long does a project take?",
+        a: "Starter pages go live in 3\u20135 days. Multi-page Business & SEO sites typically take 2\u20134 weeks. Enterprise projects get a dedicated timeline scoped during our first call.",
     },
     {
-        q: "Do you guarantee SEO rankings?",
-        a: "We guarantee a scientifically structured, lightning-fast foundation based on modern technical SEO. While no one can guarantee reaching #1 unconditionally due to competition, our methods consistently put brands at the top of their niche.",
+        q: "Can you guarantee first-page Google rankings?",
+        a: "No one can guarantee a specific ranking position \u2014 anyone who says otherwise is lying. What we guarantee is a technically flawless, search-optimized foundation. Clean code, fast load times, structured data, and keyword-targeted content. We\u2019ve consistently placed brands at the top of their local niche with this approach.",
     },
     {
-        q: "Why are there no templates?",
-        a: 'Templates dilute brand identity. We practice "Deep Design Thinking", ensuring every project has unique geometry, animation curves, and interactions that make it memorable (no generic split-screens here).',
+        q: "Why no templates?",
+        a: "Templates look like templates. Visitors can tell. We build from a blank canvas every time so your site feels like your brand, not a reskinned version of someone else\u2019s. Unique geometry, animation curves, and interactions that stick in memory.",
     },
     {
-        q: "What is the payment structure?",
-        a: "Standard projects require a 50% deposit to commence work with the remaining balance due upon successful test rollout before final launch. Custom projects can be milestone-based.",
+        q: "What\u2019s the payment structure?",
+        a: "50% upfront to start. The remaining 50% after you\u2019ve reviewed a working test deployment and approved it. Enterprise projects can be structured around milestones. No surprises.",
+    },
+    {
+        q: "What is GEO (Generative Engine Optimization)?",
+        a: "When your customers ask ChatGPT, Perplexity, or Google AI for a recommendation in your industry, GEO ensures you\u2019re the name that comes up. We structure your content and online presence so AI systems cite and recommend your business.",
+    },
+    {
+        q: "Do you handle hosting and maintenance?",
+        a: "We can. We deploy on Vercel or similar edge platforms for maximum speed and uptime. Post-launch maintenance and updates are available as an add-on or part of Enterprise plans.",
     },
 ];
 

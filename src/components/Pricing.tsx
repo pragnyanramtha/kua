@@ -7,13 +7,13 @@ const plans = [
   {
     name: "Starter / Landing",
     price: "₹5,000",
-    desc: "Perfect for new businesses needing an immediate high-end online presence.",
+    desc: "One high-impact landing page to get you online fast. Ideal if you\u2019ve been running on word-of-mouth alone and need a home base.",
     features: [
       "1 Landing Page",
-      "Mobile Responsive",
-      "High-speed Setup",
-      "Basic SEO",
-      "1 Revision",
+      "Fully Mobile Responsive",
+      "Live in 3\u20135 Days",
+      "Basic On-Page SEO",
+      "1 Round of Revisions",
     ],
     isPopular: false,
     color: "#CCFF00",
@@ -21,10 +21,10 @@ const plans = [
   {
     name: "Business & SEO",
     price: "₹20,000",
-    desc: "A full-scale website built to capture leads and rank on Google.",
+    desc: "A full multi-page site engineered to rank on Google and turn visitors into paying customers.",
     features: [
       "Up to 5 Pages",
-      "Advanced Tech SEO",
+      "Advanced Technical SEO",
       "CMS Integration",
       "Copywriting Support",
       "Priority Support",
@@ -35,13 +35,13 @@ const plans = [
   {
     name: "Enterprise / Custom",
     price: "Custom",
-    desc: "Complex web applications, SaaS frontends, or massive e-commerce.",
+    desc: "Complex web applications, SaaS frontends, or large-scale e-commerce builds scoped to your exact needs.",
     features: [
       "Unlimited Pages",
       "Custom Logic / Web Apps",
       "Advanced State Management",
       "Dedicated Account Manager",
-      "24/7 Monitoring",
+      "24/7 Uptime Monitoring",
     ],
     isPopular: false,
     color: "#FFFFFF",
@@ -65,8 +65,8 @@ export default function Pricing() {
           </span>
         </h2>
         <p className="text-white/60 text-xl font-light max-w-2xl mx-auto">
-          No hidden fees. Just world-class design and engineering tailored to
-          your ambition.
+          No hidden fees. No &ldquo;custom quote&rdquo; runarounds. Pick a plan,
+          and we get to work.
         </p>
       </div>
 

@@ -6,23 +6,23 @@ import { Search, Zap, LayoutTemplate, LineChart } from "lucide-react";
 const features = [
   {
     icon: <LayoutTemplate size={32} className="text-[#CCFF00]" />,
-    title: "Liquid & Premium Design",
-    desc: "Unforgettable, award-winning visual experiences that command attention. We don't use templates.",
+    title: "Custom Design, Zero Templates",
+    desc: "Every site we ship is built from scratch. No themes. No drag-and-drop. Your brand gets its own geometry, its own animation curves, its own personality. Templates dilute identity. We don\u2019t use them.",
   },
   {
     icon: <Search size={32} className="text-[#FF0055]" />,
-    title: "Technical SEO Mastery",
-    desc: "Built from the ground up to dominate search algorithms, driving organic intent-based traffic directly to you.",
+    title: "SEO That Actually Ranks",
+    desc: "We structure every page for Google\u2019s crawlers from day one. Clean URLs, schema markup, optimized Core Web Vitals, and keyword-mapped content. When someone searches your trade in your city, you show up first.",
   },
   {
     icon: <Zap size={32} className="text-[#CCFF00]" />,
-    title: "Extreme Performance",
-    desc: "Sub-second load times. Modern architectures (Next.js & React) that outpace your competition.",
+    title: "Sub-Second Load Times",
+    desc: "Built on Next.js and React. Server-rendered. Edge-cached. Your site loads in under 1 second on a 4G connection. Google rewards speed with ranking. Your visitors reward speed with their wallets.",
   },
   {
     icon: <LineChart size={32} className="text-[#FF0055]" />,
-    title: "Conversion Focused",
-    desc: "Every pixel and interaction is placed with psychological intent to turn visitors into buyers.",
+    title: "Every Pixel Earns Its Place",
+    desc: "We don\u2019t decorate pages. We engineer them. Button placement, scroll depth, color contrast, whitespace \u2014 each decision is backed by conversion data. The sites we build don\u2019t just look good. They bring in calls.",
   },
 ];
 
@@ -43,8 +43,8 @@ export default function Features() {
           </span>
         </h2>
         <p className="max-w-md text-white/50 text-lg font-light mt-6 lg:mt-0">
-          A lethal combination of striking aesthetics and ruthless search
-          optimization. Designed to make your competitors sweat.
+          Striking aesthetics paired with ruthless search optimization. Built to
+          pull your competitors&apos; customers straight to your door.
         </p>
       </div>
 

@@ -8,9 +8,15 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-    title: "Kua | High-Performing Websites for Modern Brands",
+    title: "Kua — High-Performing Websites for Modern Brands",
     description:
-        "We boost reach for modern brands with SEO-optimized, high-performing websites and transparent pricing.",
+        "Kua builds custom websites that rank on Google and bring in higher-paying customers. Technical SEO, striking design, transparent pricing. No templates.",
+    keywords: ["web design agency", "SEO", "custom website", "GEO", "business website", "India"],
+    openGraph: {
+        title: "Kua — Websites That Rank",
+        description:
+            "Custom web design + technical SEO for businesses tired of being invisible online. Transparent pricing starting at ₹5,000.",
+    },
 };
 
 export default function RootLayout({

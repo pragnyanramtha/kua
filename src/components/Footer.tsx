@@ -12,9 +12,8 @@ export default function Footer() {
             <span className="text-2xl font-bold tracking-tighter">Kua.</span>
           </div>
           <p className="text-white/50 font-light leading-relaxed">
-            A radical web design agency. We drop the templates and build
-            high-performance systems that force your brand to the top of its
-            niche.
+            We build high-performance websites that force your brand to the top
+            of its niche. No templates. No fluff. Results.
           </p>
         </div>
 

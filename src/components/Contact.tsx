@@ -23,8 +23,8 @@ export default function Contact() {
             </span>
           </h2>
           <p className="text-xl text-white/60 font-light max-w-md mb-12">
-            Ready to upgrade your brand&apos;s digital presence? Fill out the
-            form and we&apos;ll hit you back within 24 hours.
+            Ready to stop being invisible online? Fill out the form. We&apos;ll
+            get back to you within 24 hours.
           </p>
 
           <div className="space-y-6">
