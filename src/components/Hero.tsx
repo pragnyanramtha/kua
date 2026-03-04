@@ -14,15 +14,15 @@ export default function Hero() {
           className="relative mix-blend-difference"
         >
           <h1 className="text-[clamp(3rem,8vw,8rem)] leading-[0.9] font-bold tracking-tighter text-white uppercase wrap-break-word w-full">
-            High-Performing
+            Websites Built
             <br />
             <span
               className="text-transparent"
-              style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.1)" }}
+              style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.3)" }}
             >
-              Websites
+              To Dominate
             </span>{" "}
-            First.
+            Search.
           </h1>
         </motion.div>
 
