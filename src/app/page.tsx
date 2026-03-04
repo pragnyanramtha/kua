@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
-import Pricing from "@/components/Pricing";
+import { Pricing } from "@/components/ui/pricing";
+import { kuaPlans } from "@/components/ui/pricing-demo";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -23,7 +24,11 @@ export default function Home() {
       <div className="z-10 w-full">
         <Hero />
         <Features />
-        <Pricing />
+        <Pricing
+          plans={kuaPlans}
+          title="TRANSPARENT PRICING."
+          description="No hidden fees. No 'custom quote' runarounds. Pick a plan, and we get to work."
+        />
         <Faq />
         <Contact />
       </div>
