@@ -5,7 +5,7 @@ import { Pricing } from "@/components/ui/pricing";
 export const kuaPlans = [
     {
         name: "Starter / Landing",
-        price: "5000",
+        price: "20000",
         yearlyPrice: "4000",
         period: "project",
         features: [
@@ -23,7 +23,7 @@ export const kuaPlans = [
     },
     {
         name: "Business & SEO",
-        price: "20000",
+        price: "50000",
         yearlyPrice: "16000",
         period: "project",
         features: [
