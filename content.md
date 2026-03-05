@@ -249,7 +249,7 @@ Ready to stop being invisible online? Fill out the form. We'll get back to you w
 | Element | Value |
 |---------|-------|
 | **Email Badge** | E |
-| **Email** | hello@kua.agency |
+| **Email** | pragnyanramtha@gmail.com |
 
 ### Form Fields
 

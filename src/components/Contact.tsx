@@ -1,9 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Mail, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const formData = new FormData(e.currentTarget);
+    const data = new URLSearchParams(formData as any).toString();
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data,
+      });
+      setStatus("success");
+      // Reset form if needed, but showing success UI is better.
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -30,7 +54,7 @@ export default function Contact() {
               <div className="w-12 h-12 rounded-full glass-panel border border-[#CCFF00]/30 flex items-center justify-center text-[#CCFF00]">
                 <Mail className="h-5 w-5" />
               </div>
-              <p className="text-lg">hello@kua.agency</p>
+              <p className="text-lg">pragnyanramtha@gmail.com</p>
             </div>
           </div>
         </div>
@@ -39,50 +63,98 @@ export default function Contact() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="glass-panel p-8 sm:p-12 rounded-3xl border-white/10 shadow-2xl"
+          className="glass-panel p-8 sm:p-12 rounded-3xl border-white/10 shadow-2xl relative overflow-hidden"
         >
-          <form
-            className="flex flex-col gap-6"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-white/50 uppercase tracking-widest pl-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="John Doe"
-                  className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-[#CCFF00] transition-colors text-white placeholder:text-white/20"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-white/50 uppercase tracking-widest pl-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="john@company.com"
-                  className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-[#CCFF00] transition-colors text-white placeholder:text-white/20"
-                />
-              </div>
-            </div>
+          <AnimatePresence mode="wait">
+            {status === "success" ? (
+              <motion.div
+                key="success"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="flex flex-col items-center justify-center py-12 text-center"
+              >
+                <div className="w-20 h-20 rounded-full bg-[#CCFF00]/20 flex items-center justify-center text-[#CCFF00] mb-6">
+                  <CheckCircle2 size={40} />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">MESSAGE SENT.</h3>
+                <p className="text-white/60 max-w-xs">
+                  We&apos;ve received your request and will be in touch shortly.
+                </p>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="mt-8 text-[#CCFF00] hover:underline uppercase tracking-widest text-sm font-bold"
+                >
+                  Send another message
+                </button>
+              </motion.div>
+            ) : (
+              <motion.form
+                key="form"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="flex flex-col gap-6"
+                onSubmit={handleSubmit}
+                data-netlify="true"
+                name="contact-form"
+              >
+                <input type="hidden" name="form-name" value="contact-form" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-sm font-medium text-white/50 uppercase tracking-widest pl-1">
+                      Name
+                    </label>
+                    <input
+                      required
+                      name="name"
+                      type="text"
+                      placeholder="John Doe"
+                      className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-[#CCFF00] transition-colors text-white placeholder:text-white/20"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="text-sm font-medium text-white/50 uppercase tracking-widest pl-1">
+                      Email
+                    </label>
+                    <input
+                      required
+                      name="email"
+                      type="email"
+                      placeholder="john@company.com"
+                      className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-[#CCFF00] transition-colors text-white placeholder:text-white/20"
+                    />
+                  </div>
+                </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-white/50 uppercase tracking-widest pl-1">
-                Project Details
-              </label>
-              <textarea
-                rows={4}
-                placeholder="Tell us about your project, timeline, and goals..."
-                className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-[#CCFF00] transition-colors text-white placeholder:text-white/20 resize-none"
-              />
-            </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-sm font-medium text-white/50 uppercase tracking-widest pl-1">
+                    Project Details
+                  </label>
+                  <textarea
+                    required
+                    name="message"
+                    rows={4}
+                    placeholder="Tell us about your project, timeline, and goals..."
+                    className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-[#CCFF00] transition-colors text-white placeholder:text-white/20 resize-none"
+                  />
+                </div>
 
-            <button className="bg-[#CCFF00] text-black w-full py-5 rounded-xl font-bold uppercase tracking-wider text-lg hover:bg-white transition-colors mt-4">
-              Send Message
-            </button>
-          </form>
+                <button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="bg-[#CCFF00] text-black w-full py-5 rounded-xl font-bold uppercase tracking-wider text-lg hover:bg-white transition-colors mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {status === "submitting" ? "Sending..." : "Send Message"}
+                </button>
+                {status === "error" && (
+                  <p className="text-red-500 text-sm text-center">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
+              </motion.form>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
     </section>
