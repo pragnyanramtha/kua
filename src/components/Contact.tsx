@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Mail } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -8,18 +9,15 @@ export default function Contact() {
       id="contact"
       className="py-32 px-6 w-full max-w-7xl mx-auto border-t border-white/10 relative"
     >
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[400px] bg-[#CCFF00] opacity-5 blur-[150px] rounded-full pointer-events-none" />
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10 w-full items-center">
         <div>
-          <h2 className="text-6xl sm:text-8xl font-bold tracking-tighter uppercase mb-6">
-            Let&apos;s <br />
+          <h2 className="text-5xl sm:text-7xl font-bold tracking-tighter uppercase mb-6">
+            LET&apos;S{" "}
             <span
               className="text-transparent"
-              style={{ WebkitTextStroke: "1px #ffffff" }}
+              style={{ WebkitTextStroke: "2px #CCFF00" }}
             >
-              Talk.
+              TALK.
             </span>
           </h2>
           <p className="text-xl text-white/60 font-light max-w-md mb-12">
@@ -29,8 +27,8 @@ export default function Contact() {
 
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full glass-panel border border-[#CCFF00]/30 flex items-center justify-center text-[#CCFF00] font-bold">
-                E
+              <div className="w-12 h-12 rounded-full glass-panel border border-[#CCFF00]/30 flex items-center justify-center text-[#CCFF00]">
+                <Mail className="h-5 w-5" />
               </div>
               <p className="text-lg">hello@kua.agency</p>
             </div>

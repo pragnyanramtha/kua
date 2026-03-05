@@ -76,7 +76,7 @@ export default function Faq() {
                             <div
                                 className="px-6 overflow-hidden transition-all duration-300 ease-in-out"
                                 style={{
-                                    maxHeight: isOpen ? "200px" : "0",
+                                    maxHeight: isOpen ? "1000px" : "0",
                                     opacity: isOpen ? 1 : 0,
                                     paddingBottom: isOpen ? "24px" : "0",
                                 }}
