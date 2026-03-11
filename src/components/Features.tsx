@@ -29,7 +29,7 @@ const features = [
 export default function Features() {
   return (
     <section
-      id="features"
+      id="work"
       className="py-32 px-6 w-full max-w-7xl mx-auto border-t border-white/5"
     >
       <div className="flex flex-col lg:flex-row gap-8 justify-between items-start lg:items-end mb-20">

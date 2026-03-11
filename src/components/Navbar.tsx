@@ -7,7 +7,12 @@ import { useState } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const links = ["Work", "Features", "Pricing", "FAQ", "Contact"];
+  const links = [
+    { name: "What We Do", href: "#work" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
     <motion.header
@@ -26,11 +31,11 @@ export default function Navbar() {
       <nav className="hidden md:flex items-center gap-8">
         {links.map((link) => (
           <a
-            key={link}
-            href={`#${link.toLowerCase()}`}
+            key={link.name}
+            href={link.href}
             className="text-sm font-medium text-white/70 hover:text-[#CCFF00] transition-colors relative group"
           >
-            {link}
+            {link.name}
             <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
           </a>
         ))}
@@ -58,12 +63,12 @@ export default function Navbar() {
         >
           {links.map((link) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.name}
+              href={link.href}
               onClick={() => setIsOpen(false)}
               className="text-lg font-medium"
             >
-              {link}
+              {link.name}
             </a>
           ))}
           <button className="w-full bg-[#CCFF00] text-black font-semibold py-3 rounded-lg mt-4">

@@ -20,30 +20,18 @@ export default function Footer() {
         <div className="flex gap-16 md:gap-24">
           <div className="flex flex-col gap-4">
             <h4 className="font-semibold text-lg text-white mb-2">Nav</h4>
-            {["Work", "Features", "Pricing", "FAQ"].map((item) => (
+            {[
+              { name: "What We Do", href: "#work" },
+              { name: "Pricing", href: "#pricing" },
+              { name: "FAQ", href: "#faq" },
+              { name: "Contact", href: "#contact" },
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.name}
+                href={item.href}
                 className="text-white/60 hover:text-[#CCFF00] transition-colors font-light"
               >
-                {item}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <h4 className="font-semibold text-lg text-white mb-2">Socials</h4>
-            {["Twitter", "LinkedIn", "Instagram", "Dribbble"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-white/60 hover:text-[#CCFF00] transition-colors font-light flex items-center gap-1 group"
-              >
-                {item}
-                <ArrowUpRight
-                  size={14}
-                  className="opacity-0 group-hover:opacity-100 transition-opacity"
-                />
+                {item.name}
               </a>
             ))}
           </div>
